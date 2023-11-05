@@ -22,21 +22,8 @@ function Home() {
             </button>
           </div>
         </div>
-        <div className="font-bold text-5xl text-center h-max flex justify-center">
-          <div>M</div>
-          <div>e</div>
-          <div className="bg-black text-white dark:bg-light dark:text-dark">
-            m
-          </div>
-          <div className="bg-black text-white dark:bg-light dark:text-dark">
-            o
-          </div>
-          <div className="bg-black text-white dark:bg-light dark:text-dark">
-            f
-          </div>
-          <div className="bg-black text-white dark:bg-light dark:text-dark">
-            y
-          </div>
+        <div className="font-bold text-5xl text-center h-max flex justify-center select-none">
+          Memofy
         </div>
         <Notes />
       </div>
