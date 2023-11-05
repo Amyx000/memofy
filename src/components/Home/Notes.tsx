@@ -165,7 +165,7 @@ function Notes() {
                             {item.date}
                           </div>
                         </div>
-                        <div className="animate-pulse in z-[100] absolute top-0 bottom-0 flex items-center right-[5px] text-dark dark:text-light duration-200 ease-in group-hover:opacity-100 opacity-0">
+                        <div className="z-[100] absolute top-0 bottom-0 flex items-center right-[5px] text-dark dark:text-light duration-200 ease-in group-hover:opacity-100 opacity-0">
                           <button
                             onMouseEnter={() =>
                               setMenu((prev) => ({
