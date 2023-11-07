@@ -159,7 +159,7 @@ function Notes() {
                             {item?.title || `Note ${i + 1}`}
                           </div>
                           <div className="overflow-hidden cursor-pointer">
-                            <TextEditor theme="bubble" value={item.richText} />
+                            <TextEditor theme="bubble" value={item.richText} readOnly/>
                           </div>
                           <div className="text-gray-400 text-sm">
                             {item.date}
