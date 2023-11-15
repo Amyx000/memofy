@@ -3,7 +3,6 @@
 import useDarkMode from "@/hooks/useDarkMode";
 import React from "react";
 import { BsFillMoonStarsFill } from "react-icons/bs";
-import CustomModal from "../common/CustomModal";
 import Notes from "./Notes";
 
 function Home() {

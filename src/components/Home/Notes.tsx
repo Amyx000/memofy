@@ -133,6 +133,18 @@ function Notes() {
     }
   };
 
+  useEffect(() => {
+    // prevent closing of tab without saving
+    const handleTabClose = (e: BeforeUnloadEvent) => {
+      if (isOpen) {
+        e.preventDefault();
+        e.returnValue = "";
+      }
+    };
+    window.addEventListener("beforeunload", handleTabClose);
+    return () => window.removeEventListener("beforeunload", handleTabClose);
+  }, [isOpen]);
+
   return (
     <>
       <div className="relative h-full border-[1px] border-slate-100 dark:border-darkshade rounded-md p-[20px] flex-1 flex flex-col">
@@ -159,7 +171,11 @@ function Notes() {
                             {item?.title || `Note ${i + 1}`}
                           </div>
                           <div className="overflow-hidden cursor-pointer">
-                            <TextEditor theme="bubble" value={item.richText} readOnly/>
+                            <TextEditor
+                              theme="bubble"
+                              value={item.richText}
+                              readOnly
+                            />
                           </div>
                           <div className="text-gray-400 text-sm">
                             {item.date}
